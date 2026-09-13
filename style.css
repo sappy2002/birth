@@ -1,0 +1,562 @@
+/* ===== RESET & BASE ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', 'Segoe UI', sans-serif;
+    background: #fce4ec;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* ===== PASSWORD SCREEN ===== */
+.password-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #880e4f, #f06292, #ffffff);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.password-box {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 50px 40px;
+    border-radius: 30px;
+    text-align: center;
+    box-shadow: 0 20px 60px rgba(136, 14, 79, 0.4);
+    max-width: 420px;
+    width: 90%;
+    border: 3px solid #880e4f;
+}
+
+.lock-icon {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.password-box h1 {
+    color: #880e4f;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.password-box p {
+    color: #6d4c41;
+    margin-bottom: 20px;
+}
+
+.password-box input {
+    width: 100%;
+    padding: 14px;
+    font-size: 1.2rem;
+    border: 2px solid #f06292;
+    border-radius: 15px;
+    text-align: center;
+    letter-spacing: 8px;
+    outline: none;
+    transition: 0.3s;
+}
+
+.password-box input:focus {
+    border-color: #880e4f;
+    box-shadow: 0 0 20px rgba(136, 14, 79, 0.2);
+}
+
+.password-box button {
+    margin-top: 20px;
+    padding: 14px 40px;
+    font-size: 1.1rem;
+    background: linear-gradient(135deg, #880e4f, #f06292);
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: bold;
+}
+
+.password-box button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 25px rgba(136, 14, 79, 0.3);
+}
+
+.error {
+    color: #d32f2f;
+    margin-top: 12px;
+    font-size: 0.9rem;
+    min-height: 20px;
+}
+
+/* ===== MUSIC TOGGLE BUTTON ===== */
+.music-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #880e4f, #f06292);
+    color: white;
+    border: 3px solid white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 9999;
+    box-shadow: 0 4px 20px rgba(136, 14, 79, 0.4);
+    transition: 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.music-toggle:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 25px rgba(136, 14, 79, 0.5);
+}
+
+.music-toggle.muted {
+    background: linear-gradient(135deg, #6d4c41, #a1887f);
+    opacity: 0.6;
+}
+
+/* ===== MAIN CONTENT ===== */
+.main-content {
+    position: relative;
+    min-height: 100vh;
+    padding: 30px 20px;
+    background: linear-gradient(180deg, #fce4ec, #ffffff, #fce4ec);
+}
+
+/* ===== FLOATING ELEMENTS ===== */
+.floating-elements {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+    overflow: hidden;
+}
+
+/* ===== HEADER ===== */
+.header {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.main-title {
+    font-size: 2.5rem;
+    color: #880e4f;
+    font-weight: bold;
+}
+
+.main-title .highlight {
+    color: #d81b60;
+    font-size: 2.8rem;
+    text-shadow: 0 0 20px rgba(136, 14, 79, 0.3);
+}
+
+.main-title .heart-beat {
+    display: inline-block;
+    animation: heartBeat 1s infinite;
+    color: #d81b60;
+}
+
+.cat-divider {
+    font-size: 1.8rem;
+    margin: 10px 0;
+    letter-spacing: 8px;
+    color: #880e4f;
+}
+
+/* ===== WISH CONTAINER ===== */
+.wish-container {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 60vh;
+    padding: 20px;
+}
+
+.wish-card {
+    background: rgba(255, 255, 255, 0.92);
+    padding: 50px 40px;
+    border-radius: 30px;
+    text-align: center;
+    max-width: 700px;
+    width: 100%;
+    box-shadow: 0 20px 60px rgba(136, 14, 79, 0.2);
+    border: 3px solid #f06292;
+    animation: fadeInUp 1s ease;
+}
+
+.wish-title {
+    font-size: 2.8rem;
+    line-height: 1.4;
+    color: #880e4f;
+    margin-bottom: 20px;
+}
+
+.puchkiii-name {
+    color: #d81b60;
+    font-size: 3.2rem;
+    text-shadow: 0 0 30px rgba(216, 27, 96, 0.3);
+}
+
+.comma {
+    color: #880e4f;
+    font-size: 3rem;
+}
+
+.beautiful-text {
+    color: #880e4f;
+    font-size: 2.5rem;
+    background: linear-gradient(135deg, #880e4f, #f06292);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.wish-message {
+    font-size: 1.3rem;
+    color: #6d4c41;
+    line-height: 1.8;
+    margin: 20px 0;
+}
+
+/* ===== HEART ROW ===== */
+.heart-row {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin: 20px 0;
+    font-size: 2rem;
+}
+
+.heart-beat {
+    display: inline-block;
+    animation: heartBeat 1.2s infinite;
+    color: #d81b60;
+}
+
+@keyframes heartBeat {
+    0%, 100% { transform: scale(1); }
+    15% { transform: scale(1.3); }
+    30% { transform: scale(1); }
+    45% { transform: scale(1.2); }
+    60% { transform: scale(1); }
+}
+
+/* ===== CAT ROW ===== */
+.cat-row {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 20px 0;
+    font-size: 2.5rem;
+}
+
+.cat-bounce {
+    display: inline-block;
+    animation: catBounce 1.5s infinite;
+}
+
+@keyframes catBounce {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-15px) rotate(5deg); }
+}
+
+/* ===== START BUTTON ===== */
+.start-btn {
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    margin: 20px auto;
+    padding: 18px 45px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    background: linear-gradient(135deg, #880e4f, #f06292);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.4s;
+    box-shadow: 0 8px 30px rgba(136, 14, 79, 0.4);
+    animation: pulseBtn 2s infinite;
+}
+
+.start-btn:hover {
+    transform: scale(1.08);
+    box-shadow: 0 12px 40px rgba(136, 14, 79, 0.5);
+}
+
+@keyframes pulseBtn {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+/* ===== FULLSCREEN CINEMATIC SLIDESHOW ===== */
+.cinema-section {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 9999;
+    background: #000;
+    overflow: hidden;
+}
+
+.cinema-stage {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+/* ===== SLIDE TRANSITION EFFECT ===== */
+.cinema-media {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 1s cubic-bezier(0.77, 0, 0.175, 1);
+    will-change: transform;
+}
+
+.cinema-media.slide-current {
+    transform: translateX(0);
+}
+
+.cinema-media.slide-next {
+    transform: translateX(100%);
+}
+
+.cinema-media.slide-exit-left {
+    transform: translateX(-100%);
+}
+
+.cinema-media.slide-enter-right {
+    transform: translateX(0);
+    transition: transform 1s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.cinema-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    animation: none;
+    background: #000;
+}
+
+.cinema-media video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@keyframes kenBurns {
+    0% { transform: scale(1) translate(0, 0); }
+    100% { transform: scale(1.1) translate(-10px, -10px); }
+}
+
+/* ===== LYRIC OVERLAY ===== */
+.lyric-overlay {
+    position: absolute;
+    bottom: 80px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    padding: 20px 40px;
+    z-index: 10;
+    pointer-events: none;
+    background: linear-gradient(transparent, rgba(0,0,0,0.7));
+    min-height: 200px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.lyric-text {
+    font-size: 2.5rem;
+    color: white;
+    font-weight: bold;
+    text-shadow: 
+        0 0 20px rgba(240, 98, 146, 0.8),
+        0 0 40px rgba(136, 14, 79, 0.6),
+        2px 2px 8px rgba(0,0,0,0.9);
+    animation: lyricAppear 0.8s ease;
+    font-family: 'Georgia', serif;
+    letter-spacing: 2px;
+    line-height: 1.4;
+    max-width: 90%;
+}
+
+@keyframes lyricAppear {
+    from { 
+        opacity: 0; 
+        transform: translateY(30px) scale(0.9); 
+        filter: blur(10px);
+    }
+    to { 
+        opacity: 1; 
+        transform: translateY(0) scale(1); 
+        filter: blur(0);
+    }
+}
+
+/* ===== PROGRESS BAR ===== */
+.progress-bar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 6px;
+    background: rgba(255, 255, 255, 0.2);
+    z-index: 20;
+}
+
+.progress-fill {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, #f06292, #880e4f);
+    transition: width 0.3s linear;
+    box-shadow: 0 0 20px rgba(240, 98, 146, 0.8);
+}
+
+/* ===== FINALE OVERLAY ===== */
+.cinema-finale {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow-y: auto;
+    background: linear-gradient(135deg, #880e4f, #f06292, #ffffff);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    z-index: 10000;
+    animation: fadeIn 2s ease;
+    padding: 20px;
+}
+
+.finale-content {
+    text-align: center;
+    margin: 30px auto;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    padding: 60px 40px;
+    border-radius: 40px;
+    border: 3px solid rgba(255, 255, 255, 0.4);
+    max-width: 700px;
+    width: 100%;
+    box-shadow: 0 20px 80px rgba(0,0,0,0.3);
+}
+
+.cinema-finale .quote-text {
+    font-size: 1.2rem;
+    color: white;
+    font-style: italic;
+    line-height: 1.6;
+    text-shadow: 0 4px 20px rgba(0,0,0,0.4);
+    margin: 20px 0;
+}
+
+.cinema-finale .quote-signature {
+    margin-top: 25px;
+    font-size: 1.4rem;
+    color: white;
+    font-weight: bold;
+    text-shadow: 0 4px 20px rgba(0,0,0,0.4);
+}
+
+.cinema-finale .signature-name {
+    font-size: 3rem;
+    color: white;
+    font-weight: bold;
+    text-shadow: 0 0 30px rgba(255,255,255,0.8);
+    display: block;
+    margin-top: 10px;
+}
+
+.cinema-finale .cat-divider {
+    font-size: 2rem;
+    letter-spacing: 10px;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.cinema-finale .heart-row,
+.cinema-finale .cat-row {
+    justify-content: center;
+    display: flex;
+    gap: 15px;
+    font-size: 2rem;
+    margin: 20px 0;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(40px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 600px) {
+    .main-title { font-size: 1.8rem; }
+    .main-title .highlight { font-size: 2rem; }
+    .wish-title { font-size: 2rem; }
+    .puchkiii-name { font-size: 2.2rem; }
+    .beautiful-text { font-size: 1.8rem; }
+    .wish-card { padding: 30px 20px; }
+    .wish-message { font-size: 1rem; }
+    .start-btn { padding: 14px 30px; font-size: 1rem; }
+    .heart-row { font-size: 1.5rem; gap: 8px; }
+    .cat-row { font-size: 1.8rem; gap: 10px; }
+    .cat-divider { font-size: 1.2rem; }
+    .password-box { padding: 30px 20px; }
+    .password-box h1 { font-size: 1.3rem; }
+    
+    .lyric-text { font-size: 1.5rem; padding: 0 10px; }
+    .lyric-overlay { bottom: 50px; padding: 15px 20px; }
+    
+   .cinema-finale .quote-text {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+    .cinema-finale .signature-name { font-size: 2rem; }
+    .finale-content {
+    padding: 30px 20px;
+    margin: 20px auto;
+}
+    
+    .music-toggle {
+        width: 45px;
+        height: 45px;
+        font-size: 1.2rem;
+        top: 15px;
+        right: 15px;
+    }
+}

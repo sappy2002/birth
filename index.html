@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>🎂 Happy Birthday Puchkiii! 🐱</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <!-- ===== BACKGROUND MUSIC ===== -->
+    <audio id="bgMusic" loop>
+        <source src="photos/song1/birthday_song.mp3" type="audio/mpeg" />
+        Your browser does not support audio.
+    </audio>
+
+    <!-- ====== PASSWORD SCREEN ====== -->
+    <div id="passwordScreen" class="password-screen">
+        <div class="password-box">
+            <div class="lock-icon">🔐</div>
+            <h1>Pov: It's Your Birthday 🎂</h1>
+            <p>Enter your birthday to unlock the surprise ❤️</p>
+            <input type="password" id="passwordInput" placeholder="DDMM" maxlength="4" />
+            <button onclick="checkPassword()">🐱 Unlock 🐱</button>
+            <p id="errorMsg" class="error"></p>
+        </div>
+    </div>
+
+    <!-- ====== MAIN CONTENT ====== -->
+    <div id="mainContent" class="main-content" style="display: none;">
+
+        <!-- Music Toggle Button -->
+        <button id="musicToggle" class="music-toggle" onclick="toggleMusic()">
+            🎵
+        </button>
+
+        <!-- Floating Hearts & Cats Background -->
+        <div id="floatingElements" class="floating-elements"></div>
+
+        <!-- ===== HEADER ===== -->
+        <div class="header">
+            <h1 class="main-title">
+                <span class="heart-beat">❤️</span>
+                Pov: It's 
+                <span class="highlight">Puchkiii</span>
+                's Birthday 🎉
+            </h1>
+            <div class="cat-divider">🐱 🐈 🐱 🐈 🐱</div>
+        </div>
+
+        <!-- ===== BIRTHDAY WISH ===== -->
+        <div class="wish-container">
+            <div class="wish-card">
+                <h2 class="wish-title">
+                    Happy Birthday, 
+                    <span class="puchkiii-name">Puchkiii</span>
+                    <span class="comma">,</span>
+                    <br />
+                    <span class="beautiful-text">Beautiful! ❤️</span>
+                </h2>
+                
+                <p class="wish-message">
+                    Today is all about celebrating you and the joy<br />
+                    you bring to my life.
+                </p>
+
+                <div class="heart-row">
+                    <span class="heart-beat">❤️</span>
+                    <span class="heart-beat" style="animation-delay: 0.2s;">❤️</span>
+                    <span class="heart-beat" style="animation-delay: 0.4s;">❤️</span>
+                    <span class="heart-beat" style="animation-delay: 0.6s;">❤️</span>
+                    <span class="heart-beat" style="animation-delay: 0.8s;">❤️</span>
+                </div>
+
+                <div class="cat-row">
+                    <span class="cat-bounce">🐱</span>
+                    <span class="cat-bounce" style="animation-delay: 0.3s;">🐈</span>
+                    <span class="cat-bounce" style="animation-delay: 0.6s;">🐱</span>
+                    <span class="cat-bounce" style="animation-delay: 0.9s;">🐈</span>
+                    <span class="cat-bounce" style="animation-delay: 1.2s;">🐱</span>
+                </div>
+
+                <!-- ===== START BUTTON ===== -->
+                <button id="revealBtn" class="start-btn">
+                    🐱 Start the Celebration 🎉
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ====== FULLSCREEN CINEMATIC SLIDESHOW ====== -->
+    <div id="slideshowSection" class="cinema-section" style="display: none;">
+        
+        <!-- Fullscreen Media Display -->
+        <div class="cinema-stage">
+            <div class="cinema-media" id="cinemaMedia">
+                <!-- Current photo/video goes here -->
+            </div>
+            
+            <!-- Lyric Overlay -->
+            <div class="lyric-overlay" id="lyricOverlay">
+                <p class="lyric-text" id="lyricText"></p>
+            </div>
+            
+            <!-- Progress Bar -->
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+        </div>
+
+        <!-- Final Quote Overlay (appears at end) -->
+        <div id="finalQuote" class="cinema-finale" style="display: none;">
+            <div class="finale-content">
+                <div class="cat-divider">🐱 🐈 🐱 🐈 🐱</div>
+                <p class="quote-text">
+                    "It all began on August 1st — a day that wasn't supposed to be a date, but somewhere between the conversations and the moments we shared, it quietly turned into the most beautiful beginning of my life. From that day on, you became my Puchkiiiii, my heart, my everything. Even though distance keeps us apart, you're always with me in every thought, every heartbeat, every little thing I do. I miss you more than words can say, and without you, my life would have been completely colorless — you're the color, the light, and the reason behind my smile. Happy Birthday, my love. 🎂💖 Here's to us, to our story, and to forever.
+
+
+                    Every love story is beautiful,<br />
+                    but ours is my favorite."
+                </p>
+                <div class="heart-row">
+                    <span class="heart-beat">❤️</span>
+                    <span class="heart-beat" style="animation-delay: 0.2s;">❤️</span>
+                    <span class="heart-beat" style="animation-delay: 0.4s;">❤️</span>
+                    <span class="heart-beat" style="animation-delay: 0.6s;">❤️</span>
+                    <span class="heart-beat" style="animation-delay: 0.8s;">❤️</span>
+                </div>
+                <p class="quote-signature">
+                    With all my heart,<br />
+                    <span id="signatureName" class="signature-name"></span> 
+                    <span class="heart-beat" style="display: inline-block;">❤️</span>
+                </p>
+                <div class="cat-row">
+                    <span class="cat-bounce">🐱</span>
+                    <span class="cat-bounce" style="animation-delay: 0.3s;">🐈</span>
+                    <span class="cat-bounce" style="animation-delay: 0.6s;">🐱</span>
+                    <span class="cat-bounce" style="animation-delay: 0.9s;">🐈</span>
+                    <span class="cat-bounce" style="animation-delay: 1.2s;">🐱</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
