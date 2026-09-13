@@ -11,11 +11,11 @@ const SLIDE_DURATION = 5;
 // ALL slides (photos & videos) = 5 seconds each
 const slideshowTimeline = [
     { 
-        media: { type: 'image', src: 'photos/photos/pic1.jpeg' }, 
+        media: { type: 'image', src: 'photos/photos/pic5.jpeg' }, 
         lyric: '🎵 Every moment with you...'
     },
     { 
-        media: { type: 'image', src: 'photos/photos/pic2.jpeg' }, 
+        media: { type: 'image', src: 'photos/photos/pic1.jpeg' }, 
         lyric: '...is a memory I treasure ❤️'
     },
     { 
@@ -23,7 +23,7 @@ const slideshowTimeline = [
         lyric: '🎶 You make my heart smile...'
     },
     { 
-        media: { type: 'image', src: 'photos/photos/pic3.jpeg' }, 
+        media: { type: 'image', src: 'photos/photos/pic2.jpeg' }, 
         lyric: '...in ways I never knew possible 💕'
     },
     { 
@@ -31,9 +31,13 @@ const slideshowTimeline = [
         lyric: '🎵 Together, we are unstoppable...'
     },
     { 
-        media: { type: 'image', src: 'photos/photos/pic4.jpeg' }, 
+        media: { type: 'image', src: 'photos/photos/pic3.jpeg' }, 
         lyric: '...and I love you more each day 🐱❤️'
     },
+    {
+         media: { type: 'image', src: 'photos/photos/pic4.jpeg' }, 
+        lyric: '...Happy Birthday 🐱❤️'
+    }
     // Add more entries as needed - each will show for 5 seconds
 ];
 
