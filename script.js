@@ -41,7 +41,11 @@ const slideshowTimeline = [
      { 
         media: { type: 'image', src: 'photos/photos/pic6.jpeg' }, 
         
+    }, { 
+        media: { type: 'image', src: 'photos/photos/pic7.jpeg' }, 
+        
     },
+
     {
          media: { type: 'image', src: 'photos/photos/pic4.jpeg' }, 
         lyric: '...Happy Birthday 🐱❤️'
