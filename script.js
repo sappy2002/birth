@@ -1,5 +1,5 @@
 // ===== CONFIGURATION =====
-const CORRECT_PASSWORD = "29092003"; // CHANGE THIS to her birthday (DDMM)
+const CORRECT_PASSWORD = "2909"; // CHANGE THIS to her birthday (DDMM)
 const YOUR_NAME = "TIASH";
 const MUSIC_VOLUME = 0.5;
 const TRANSITION_DURATION = 1.1;
