@@ -1,5 +1,5 @@
 // ===== CONFIGURATION =====
-const CORRECT_PASSWORD = "2909"; // CHANGE THIS to her birthday (DDMM)
+const CORRECT_PASSWORD = "29092003"; // CHANGE THIS to her birthday (DDMM)
 const YOUR_NAME = "TIASH";
 const MUSIC_VOLUME = 0.5;
 const TRANSITION_DURATION = 1.1;
@@ -36,11 +36,11 @@ const slideshowTimeline = [
     },
     { 
         media: { type: 'video', src: 'photos/videoos2/video3.mp4' }, 
-         
+        lyric: '🎵 Your love lights up my world...'
     },
      { 
         media: { type: 'image', src: 'photos/photos/pic6.jpeg' }, 
-        
+        lyric: '...and I am grateful for every moment 🐱❤️'
     }, { 
         media: { type: 'image', src: 'photos/photos/pic7.jpeg' }, 
         
